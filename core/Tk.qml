@@ -106,7 +106,7 @@ QtObject {
   // The edge the bar is on, set by Bar.qml from the host's resolved position.
   property string barEdge: "left"
   readonly property bool barVertical: barEdge === "left" || barEdge === "right"
-  readonly property int barInner: px(40)
+  readonly property int barInner: px(32) // Local: slimmer bar (upstream 40)
   readonly property int barWidth: barInner + 2 * Math.max(padding.small, border)
 
   // Sizes

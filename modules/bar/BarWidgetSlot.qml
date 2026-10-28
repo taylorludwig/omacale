@@ -69,7 +69,8 @@ Item {
   readonly property real logicalCell: cellLen / iconScale
   // Longest label that is still turned (in a column) rather than replaced, in
   // bar widths; on a row a label is drawn upright and can run longer.
-  readonly property real maxRotatedSpan: vertical ? 3 : 8
+  // Local: a horizontal bar has room for wide widgets (named workspace lists).
+  readonly property real maxRotatedSpan: vertical ? 3 : 60
 
   readonly property real naturalWidth: activeItem ? Math.max(0, Number(activeItem.implicitWidth) || 0) : 0
   readonly property real naturalHeight: activeItem ? Math.max(0, Number(activeItem.implicitHeight) || 0) : 0
